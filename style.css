@@ -10,30 +10,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(242, 204, 143);
 }
 
 .calculator {
     display: flex;
+    min-width: 400px;
+    min-height: 600px;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    width: 500px;
-    height: 700px;
-    background-color: black;
+    max-width: 500px;
     border-radius: 25px;
-    
+    padding: 30px;
+    background-color: rgb(61, 64, 91);
+    border: 1mm solid rgb(81, 84, 111);
 }
 
 .screen {
-    width: 400px;
-    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+
+    gap: 15px;
+    height: 100px;
+    width: 100%;
     margin-top: 25px;
-    padding: 20px;
 
-    border: 1mm solid gray;
-    background-color: rgb(214, 214, 214);
+    padding: 65px 25px;
 
-    text-align: right;
+    color: rgb(53, 34, 8);
+    border: 1mm solid rgb(81, 84, 111);
+    background-color: rgb(244, 241, 222);
+    
     font-size: 58px;
     word-wrap: break-word;
     word-break: break-all;
@@ -43,43 +53,57 @@ body {
     font-size: 22px;
 }
 
+.topButtonContainer {
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.topButtonContainer .button {
+    width: 100%;
+}
+
 .buttonContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;   
     gap: 20px; 
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 42px;
 }
 
 .button {
     width: calc(20%);
     height: 80px;
-    border: 1mm solid gray;
+    border: 1mm solid rgb(240, 147, 121);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    color: white;
+    color: rgb(242, 204, 143);
+    background-color: rgb(224, 122, 95);
     font-size: 24px;
     font-weight: 800;
     transition: transform 0.01s ease;
-
 }
 
-.button.nothing {
-    border: 1mm solid black;
+.button.delete,
+.button.clear,
+.button.equals {
+    background-color: rgb(129, 178, 154);
+    border: 1mm solid rgb(159, 202, 181);
 }
 
 .button:hover {
     cursor: pointer;
-    background-color: rgb(33, 33, 33);
-    transform: move();
+    background-color: rgb(183, 97, 73);
+    transform: move(1);
 }
 
-.button.nothing:hover {
-    cursor: default;
-    background-color: black;
+.button.equals:hover,
+.button.delete:hover,
+.button.clear:hover {
+    background-color: rgb(112, 161, 137);
 }
